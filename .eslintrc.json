@@ -29,5 +29,8 @@
             "error",
             "always"
         ]
+    },
+    "[prisma]*": {
+        "editor.formatOnSave": true
     }
 }
