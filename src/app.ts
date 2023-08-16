@@ -1,7 +1,8 @@
 import fastify from 'fastify'
+import { register } from './http/controllers/register';
+import { appRoutes } from './http/routes';
 
-const app = fastify();
-app.get('/check-in', (request, reply) => {
-    return reply.status(200).send({'message': 'Check-in was registered'})
-})
+const app = fastify()
+app.register(appRoutes)
+
 export default app
