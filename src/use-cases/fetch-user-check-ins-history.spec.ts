@@ -12,11 +12,11 @@ describe('Fetch User Check-in History Use Case', () => {
   })
 
   it('should be able to fetch check-in history', async () => {
-    checkInsRepository.create({
+    await checkInsRepository.create({
       user_id: 'user-01',
       gym_id: 'gym-01',
     })
-    checkInsRepository.create({
+    await checkInsRepository.create({
       user_id: 'user-01',
       gym_id: 'gym-02',
     })
@@ -30,7 +30,7 @@ describe('Fetch User Check-in History Use Case', () => {
 
   it('should be able to fetch paginated check-in history', async () => {
     for (let i: number = 0; i < 22; i++) {
-      checkInsRepository.create({
+      await checkInsRepository.create({
         user_id: 'user-01',
         gym_id: `gym-${i + 1}`,
       })

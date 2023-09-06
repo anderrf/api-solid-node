@@ -13,11 +13,11 @@ describe('get user metrics', () => {
   })
 
   it('should be able to get check-ins count from metrics', async () => {
-    checkInsRepository.create({
+    await checkInsRepository.create({
       user_id: 'user-01',
       gym_id: 'gym-01',
     })
-    checkInsRepository.create({
+    await checkInsRepository.create({
       user_id: 'user-01',
       gym_id: 'gym-02',
     })
