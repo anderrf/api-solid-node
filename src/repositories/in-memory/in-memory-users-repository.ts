@@ -26,6 +26,7 @@ export class InMemoryUsersRepository implements UsersRepository {
       ...data,
       id: data.id ? data.id : randomUUID(),
       created_at: data.created_at ? new Date(data.created_at) : new Date(),
+      role: data.role ?? 'MEMBER',
     }
     this.items.push(user)
     return user
